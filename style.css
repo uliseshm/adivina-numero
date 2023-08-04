@@ -41,6 +41,11 @@ button {
 
 /* Estilo para movil */
 @media (max-width: 368px) {
+
+    body {
+        background-color: orangered;
+    }
+
     .contenedor {
         margin: 30% 20px;
         padding: 5px;
