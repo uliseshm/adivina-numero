@@ -8,7 +8,7 @@ let mensaje = document.getElementById('mensaje')
 let intento = document.getElementById('intento')
 let intentos = 0
 
-alert("Tienes 10 intentos")
+
 
 //funcion para revisar el numero introducido
 function checarResultado() {
