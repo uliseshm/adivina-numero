@@ -34,16 +34,19 @@ button {
 
 #mensaje {
     color: #333;
-    font-family: Arial, sans-serif;
     font-size: 18px;
     margin-top: 20px;
 }
 
+/* ventana modal */
+
+
 /* Estilo para movil */
-@media (max-width: 368px) {
+@media (max-width: 480px) {
 
     body {
-        background-color: orangered;
+        background-image: url(./assets/img/background.jpg);
+        background-size: auto;
     }
 
     .contenedor {
@@ -68,15 +71,56 @@ button {
         border: none;
         margin-bottom: 10px;
         width: 90%;
+        height: 3.2rem;
+        font-size: 2.3rem;
         text-align: center;
     }
 
     button {
         border-radius: 5px;
-
+        font-size: 1.2rem;
     }
 
     #mensaje {
         margin-bottom: 15px;
+    }
+
+    /* ventana modal */
+    .contenedor-modal {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        visibility: hidden;
+    }
+
+    .modal {
+        margin: 30% 5%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+    }
+    
+    .modal img {
+        margin: 1rem;
+        height: 120px;
+        width: 120px;
+    }
+
+    .titulo-modal {
+        font-size: 3rem;
+        padding: 1rem;
+    }
+
+    .mensaje-modal {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-jugar {
+        margin-bottom: 1rem;
     }
 }
