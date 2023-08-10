@@ -80,6 +80,5 @@ btnJugar.addEventListener('click', () => {
 function mayLose() {
     if (intentos > 7) {
         intento.style.color = "red"
-        intento.style.fontSize = "1.9rem"
     }
 }

@@ -123,19 +123,17 @@ h4 {
 @media (max-width: 480px) {
 
     body {
-        position: initial;
+        background-image: none;
+        background-color: #f79a33;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 3rem;
-        height: 100vh;
-        background-size: auto;
     }
 
     .contenedor {
         position: fixed;
-        width: 400px;
-        height: 550px;
+        width: 85%;
+        height: auto;
         padding: 1.3rem;
         border: 1px solid #ccc;
         background-color: rgba(255, 255, 255, 0.4);
@@ -183,22 +181,18 @@ h4 {
         width: 100vw;
         height: 100vh;
         position: absolute;
-        top: 0;
         background-color: rgba(0, 0, 0, 0.5);
         z-index: 1;
         visibility: hidden;
-
     }
 
     .modal {
-        padding: 5px;
+        width: 85%;
+        padding: 1rem;
         border: 1px solid #ccc;
         background-color: rgba(255, 255, 255, 0.9);
         border-radius: 10px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: relative;
     }
 
     .modal img {
@@ -214,10 +208,6 @@ h4 {
 
     .mensaje-modal {
         font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .btn-jugar {
-        margin-bottom: 1rem;
+        margin-bottom: .7rem;
     }
 }
