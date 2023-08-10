@@ -116,35 +116,47 @@ h4 {
     margin-bottom: 1rem;
 }
 
+
+
+
 /* ESTILOS PARA DISPOSITIVOS MOVILES */
 @media (max-width: 480px) {
 
     body {
-        background-image: url(./assets/img/background.jpg);
+        position: initial;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3rem;
+        height: 100vh;
         background-size: auto;
     }
 
     .contenedor {
-        margin: 30% 20px;
-        padding: 5px;
+        position: fixed;
+        width: 400px;
+        height: 550px;
+        padding: 1.3rem;
         border: 1px solid #ccc;
         background-color: rgba(255, 255, 255, 0.4);
         border-radius: 10px;
     }
 
     h1 {
-        margin-bottom: 20px;
+        margin: 0;
+        font-size: 2.3rem;
+        margin-bottom: .2rem;
     }
 
     .introduce-mensaje {
-        margin-bottom: 15px;
+        margin-bottom: 1rem;
     }
 
     input {
         border-radius: 5px;
         outline: none;
         border: none;
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
         width: 90%;
         height: 3.2rem;
         font-size: 2.3rem;
@@ -154,10 +166,16 @@ h4 {
     button {
         border-radius: 5px;
         font-size: 1.2rem;
+        height: 3rem;
     }
 
     #mensaje {
-        margin-bottom: 15px;
+        font-size: 1.5rem;
+        margin: .8rem;
+    }
+
+    h4 {
+        margin-bottom: .6rem;
     }
 
     /* ventana modal */
@@ -169,14 +187,18 @@ h4 {
         background-color: rgba(0, 0, 0, 0.5);
         z-index: 1;
         visibility: hidden;
+
     }
 
     .modal {
-        margin: 30% 5%;
         padding: 5px;
         border: 1px solid #ccc;
         background-color: rgba(255, 255, 255, 0.9);
         border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .modal img {

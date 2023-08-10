@@ -31,10 +31,10 @@ function checarResultado() {
             winner()
             numeroEntrada.disable = true
         } else if (numeroIngresado < numAleatorio) {
-            mensaje.textContent = 'El numero es mayor al que pusiste'
+            mensaje.textContent = 'El numero es MAYOR'
             mensaje.style.color = 'red'
         } else {
-            mensaje.textContent = 'El numero es menor al que pusiste'
+            mensaje.textContent = 'El numero es MENOR'
             mensaje.style.color = 'red'
         }
     } else if (intentos === 10) {
