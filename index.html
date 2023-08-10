@@ -7,25 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Juego de adivinar el numero</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="/assets/icons/dado.png" type="image/x-icon">
 </head>
 
 <body>
 
   <div class="contenedor">
-    <h1>Adivina el número</h1>
+    <h1>Adivina el número🎰</h1>
     <p class="introduce-mensaje">Introduce un número entre 1 y 100:</p>
     <p class="introduce-mensaje">Tienes 10 intentos</p>
     <input type="text" id="numeroEntrada">
     <button onclick="checarResultado()">Comprobar</button>
-    <p id="mensaje">A jugar</p>
-    <h4>Cantidad de intentos: <p id="intento">0</p>
-    </h4>
+    <p id="mensaje">¡Comencemos!</p>
+    <h4>Cantidad de intentos: <p id="intento">0</p></h4>
   </div>
 
   <!-- ventana modal -->
   <div class="contenedor-modal">
     <div class="modal">
-      <img class="img-modal" src="/assets/icons/trofeo-mano.png" alt="imagen">
+      <img class="img-modal" alt="imagen">
       <h2 class="titulo-modal"></h2>
       <p class="mensaje-modal"></p>
       <button class="btn-jugar">¡Jugar otra vez!</button>

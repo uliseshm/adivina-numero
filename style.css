@@ -9,39 +9,114 @@
 
 body {
     text-align: center;
-    background-color: cadetblue;
+    background-image: url(./assets/img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
 }
 
-
+.contenedor {
+    padding: 2.5rem;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 h1 {
+    font-size: 3.5rem;
     color: #333;
 }
 
+.introduce-mensaje {
+    font-size: 1.2rem;
+    padding: .3rem;
+}
+
 input {
-    padding: 5px;
-    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-bottom: 10px;
+    width: 90%;
+    height: 3.2rem;
+    font-size: 2.3rem;
+    text-align: center;
 }
 
 button {
+    width: 90%;
     padding: 8px 12px;
     background-color: #4CAF50;
     color: white;
     border: none;
-    font-size: 16px;
+    font-size: 1.6rem;
     cursor: pointer;
 }
 
 #mensaje {
     color: #333;
-    font-size: 18px;
-    margin-top: 20px;
+    font-size: 1.5rem;
+    margin: .8rem;
+}
+
+h4 {
+    font-size: 1.8rem;
 }
 
 /* ventana modal */
+.contenedor-modal {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    visibility: hidden;
+}
 
+.modal {
+    height: 400px;
+    width: 450px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-/* Estilo para movil */
+.modal img {
+    margin: 1rem;
+    height: 120px;
+    width: 120px;
+}
+
+.titulo-modal {
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+.mensaje-modal {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-jugar {
+    margin-bottom: 1rem;
+}
+
+/* ESTILOS PARA DISPOSITIVOS MOVILES */
 @media (max-width: 480px) {
 
     body {
@@ -57,7 +132,7 @@ button {
         border-radius: 10px;
     }
 
-    h1{
+    h1 {
         margin-bottom: 20px;
     }
 
@@ -103,7 +178,7 @@ button {
         background-color: rgba(255, 255, 255, 0.9);
         border-radius: 10px;
     }
-    
+
     .modal img {
         margin: 1rem;
         height: 120px;

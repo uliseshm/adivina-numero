@@ -15,9 +15,10 @@ function checarResultado() {
     let numeroIngresado = parseInt(numeroEntrada.value)
     intentos++
     intento.textContent = intentos
-    
-    if(intentos < 10){
-           
+
+    if (intentos < 10) {
+
+        mayLose()
         //se valida que solo sean numeros del 1 al 100
         if (numeroIngresado < 1 || numeroIngresado > 100 || isNaN(numeroIngresado)) {
             mensaje.textContent = 'Introduce un numero entre 1 y 100'
@@ -36,40 +37,49 @@ function checarResultado() {
             mensaje.textContent = 'El numero es menor al que pusiste'
             mensaje.style.color = 'red'
         }
-    }else if(intentos === 10){
-        //lanzar funcion aqui cuando el jugador termina sus 10 intentos
-        //alert("game over");
+    } else if (intentos === 10) {
         gameOver()
-    }else{
-      //gameOver()
     }
 
 }
 //funcion cuando pierde el jugador
 function gameOver() {
-  contenedorModal.style.visibility = "visible"
-  modal.style.visibility = "visible"
+    contenedorModal.style.visibility = "visible"
+    modal.style.visibility = "visible"
 
-  const img = document.querySelector('.img-modal')
-  img.src = "/assets/icons/juego-terminado.png"
+    const img = document.querySelector('.img-modal')
+    img.src = "/assets/icons/juego-terminado.png"
 
-  const titulo = document.querySelector('.titulo-modal')
-  titulo.textContent = "¡Perdiste!"
+    const titulo = document.querySelector('.titulo-modal')
+    titulo.textContent = "¡Perdiste!"
 
-  const mens = document.querySelector('.mensaje-modal')
-  mens.textContent = "Lo sentimos, intenta de nuevo."
+    const mens = document.querySelector('.mensaje-modal')
+    mens.textContent = `El numero era ${numAleatorio}.`
 }
 //funcion cuando el jugador gana
 function winner() {
-  contenedorModal.style.visibility = "visible"
-  modal.style.visibility = "visible"
+    contenedorModal.style.visibility = "visible"
+    modal.style.visibility = "visible"
 
-  const img = document.querySelector('.img-modal')
-  img.src = "/assets/icons/trofeo.png"
+    const img = document.querySelector('.img-modal')
+    img.src = "/assets/icons/trofeo.png"
 
-  const titulo = document.querySelector('.titulo-modal')
-  titulo.textContent = "¡Ganaste!"
+    const titulo = document.querySelector('.titulo-modal')
+    titulo.textContent = "¡Ganaste!"
 
-  const mens = document.querySelector('.mensaje-modal')
-  mens.textContent = "Bien hecho, adivinaste el numero."
+    const mens = document.querySelector('.mensaje-modal')
+    mens.textContent = "Bien hecho, adivinaste el numero."
+}
+
+//funcion del boton para recargar la pagina y jugar otra vez
+const btnJugar = document.querySelector('.btn-jugar')
+btnJugar.addEventListener('click', () => {
+    location.reload()
+});
+
+function mayLose() {
+    if (intentos > 7) {
+        intento.style.color = "red"
+        intento.style.fontSize = "1.9rem"
+    }
 }
